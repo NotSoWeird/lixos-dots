@@ -29,7 +29,7 @@ let
       ;
     inherit (final.programs) mkProgram;
     inherit (final.secrets) mkSecret mkSecretWithPath;
-    inherit (final.services) mkGraphicalService mkHyprlandService mkServiceOption;
+    inherit (final.services) mkGraphicalService mkNiriService mkServiceOption;
     inherit (final.validators)
       ifTheyExist
       hasProfile

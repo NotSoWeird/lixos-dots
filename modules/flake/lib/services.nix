@@ -10,10 +10,10 @@ let
     Install.WantedBy = [ "graphical-session.target" ];
   };
 
-  mkHyprlandService = recursiveUpdate {
+  mkNiriService = recursiveUpdate {
     Unit.PartOf = [ "graphical-session.target" ];
     Unit.After = [ "graphical-session.target" ];
-    Install.WantedBy = [ "hyprland-session.target" ];
+    Install.WantedBy = [ "niri-session.target" ];
   };
 
   /**
@@ -61,5 +61,5 @@ let
     // extraConfig;
 in
 {
-  inherit mkGraphicalService mkHyprlandService mkServiceOption;
+  inherit mkGraphicalService mkNiriService mkServiceOption;
 }
