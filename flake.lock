@@ -106,6 +106,21 @@
         "type": "github"
       }
     },
+    "easy-hosts": {
+      "locked": {
+        "lastModified": 1742736765,
+        "narHash": "sha256-840idRti6HSFsTywPkku4ak8KtwiPw+XiFFRdaT4CWk=",
+        "owner": "tgirlcloud",
+        "repo": "easy-hosts",
+        "rev": "7acbedf9c7e5ee1981647d0917dee3c8db52ccb5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tgirlcloud",
+        "repo": "easy-hosts",
+        "type": "github"
+      }
+    },
     "evergarden": {
       "inputs": {
         "nixpkgs": [
@@ -441,6 +456,7 @@
         "agenix": "agenix",
         "catppuccin": "catppuccin",
         "cosmic": "cosmic",
+        "easy-hosts": "easy-hosts",
         "evergarden": "evergarden",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager_2",

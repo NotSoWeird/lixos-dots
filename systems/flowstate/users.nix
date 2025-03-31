@@ -12,7 +12,6 @@ _: {
       terminal = "kitty";
     };
 
-
     programs = {
       cli = {
         enable = true;
