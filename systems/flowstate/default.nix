@@ -42,7 +42,7 @@
       video.enable = true;
       sound.enable = true;
       bluetooth.enable = true;
-      printing.enable = false;
+      printing.enable = true;
 
       security = {
         fixWebcam = false;
