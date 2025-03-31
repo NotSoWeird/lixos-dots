@@ -7,7 +7,9 @@
 
 flake_var := env_var('FLAKE')
 flake := if flake_var =~ '^\.*$' { justfile_directory() } else { flake_var }
+
 # flake := justfile_directory()
+
 rebuild := "nixos-rebuild"
 
 [private]

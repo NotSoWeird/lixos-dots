@@ -1,7 +1,6 @@
 {
   perSystem =
     {
-      lib,
       pkgs,
       self',
       config,
@@ -16,15 +15,14 @@
 
           DIRENV_LOG_FORMAT = "";
 
-          packages =
-            [
-              pkgs.gitMinimal # flakes require git
-              pkgs.just # quick and easy task runner
-              pkgs.cocogitto # git helpers
-              self'.formatter # nix formatter
-              pkgs.nix-output-monitor # get clean diff between generations
-              inputs'.agenix.packages.agenix # secrets
-            ];
+          packages = [
+            pkgs.gitMinimal # flakes require git
+            pkgs.just # quick and easy task runner
+            pkgs.cocogitto # git helpers
+            self'.formatter # nix formatter
+            pkgs.nix-output-monitor # get clean diff between generations
+            inputs'.agenix.packages.agenix # secrets
+          ];
 
           inputsFrom = [ config.treefmt.build.devShell ];
         };

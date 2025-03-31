@@ -15,7 +15,7 @@ let
     # we have to rexport the functions we want to use, but don't want to refer to the whole lib
     # "path". e.g. waveLib.hardware.isx86Linux can be shortened to waveLib.isx86Linux
     # NOTE: never rexport templates
-    inherit (final.hardware) isx86Linux primaryMonitor ldTernary;
+    inherit (final.hardware) primaryMonitor;
     inherit (final.helpers)
       mkPubs
       giturl

@@ -1,28 +1,39 @@
 {
+  imports = [
+    ./hardware.nix
+    ./users.nix
+  ];
+
   wave = {
     device = {
-      type = "laptop";
+      profiles = [
+        "laptop"
+        "graphical"
+      ];
       cpu = "intel";
+      gpu = null;
       monitors = [ "eDP-1" ];
       hasTPM = true;
       hasBluetooth = true;
       hasSound = true;
+      keyboard = "se";
     };
 
     system = {
       boot = {
         loader = "systemd-boot";
-        secureBoot = false;
+        # secureBoot = false;
         tmpOnTmpfs = false;
         loadRecommendedModules = true;
         enableKernelTweaks = true;
         initrd.enableTweaks = true;
+        plymouth.enable = false;
       };
 
       fs = {
-        enableDefaults = true;
         enableSwap = true;
         support = [
+          "ext4"
           "btrfs"
           "vfat"
         ];
@@ -30,7 +41,7 @@
 
       video.enable = true;
       sound.enable = true;
-      bluetooth.enable = false;
+      bluetooth.enable = true;
       printing.enable = false;
 
       security = {
@@ -40,23 +51,19 @@
 
       networking = {
         optimizeTcp = true;
+
         wirelessBackend = "iwd";
       };
-    };
-  };
 
-  home-manager.users.notsoweird = {
-    environment = {
-      desktop = "Niri";
-    };
-
-    programs = {
-      cli = {
+      virtualization = {
         enable = true;
-        modernShell.enable = true;
+        docker.enable = false;
+        qemu.enable = true;
+        podman.enable = false;
+        distrobox.enable = true;
       };
-      tui.enable = true;
-      gui.enable = true;
     };
+
+    style.font.name = "Maple Mono NF";
   };
 }

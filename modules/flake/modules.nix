@@ -30,28 +30,10 @@ in
       default = throw "There is no default module.";
     };
 
-    darwinModules = {
-      wave = {
-        class = "darwin";
-        modules = [
-          (self + /modules/base/default.nix)
-          (self + /modules/darwin/default.nix)
-        ];
-      };
-
-      default = throw "There is no default module.";
-    };
-
     homeManagerModules = {
       wave = mkModule {
         class = "homeManager";
         modules = [ (self + /modules/home/default.nix) ];
-      };
-
-      gtklock = mkModule {
-        name = "gtklock";
-        class = "homeManager";
-        modules = [ (self + /modules/extra/home-manager/gtklock.nix) ];
       };
 
       hyfetch = mkModule {

@@ -33,6 +33,14 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
+    easy-hosts = {
+      type = "github";
+      owner = "tgirlcloud";
+      repo = "easy-hosts";
+
+      # url = "git+file:/Users/isabel/dev/easy-hosts";
+    };
+
     lanzaboote = {
       type = "github";
       owner = "nix-community";
@@ -91,7 +99,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-     systems = {
+    systems = {
       type = "github";
       owner = "nix-systems";
       repo = "default";

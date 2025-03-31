@@ -98,8 +98,7 @@ let
     => true
     ```
   */
-  isModernShell =
-    conf: conf.wave.programs.cli.enable && conf.wave.programs.cli.modernShell.enable;
+  isModernShell = conf: conf.wave.programs.cli.enable && conf.wave.programs.cli.modernShell.enable;
 
   /**
     check if a predicate for any user config is true
