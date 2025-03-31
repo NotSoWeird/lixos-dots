@@ -4,7 +4,7 @@ let
 
   mkModule =
     {
-      name ? "garden",
+      name ? "wave",
       class,
       modules,
     }:
@@ -18,7 +18,7 @@ in
 {
   flake = {
     nixosModules = {
-      garden = mkModule {
+      wave = mkModule {
         class = "nixos";
         modules = [
           (self + /modules/base/default.nix)
@@ -31,7 +31,7 @@ in
     };
 
     darwinModules = {
-      garden = {
+      wave = {
         class = "darwin";
         modules = [
           (self + /modules/base/default.nix)
@@ -43,7 +43,7 @@ in
     };
 
     homeManagerModules = {
-      garden = mkModule {
+      wave = mkModule {
         class = "homeManager";
         modules = [ (self + /modules/home/default.nix) ];
       };

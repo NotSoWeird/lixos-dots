@@ -73,7 +73,7 @@ let
     => "DP-1"
     ```
   */
-  primaryMonitor = config: builtins.elemAt config.garden.device.monitors 0;
+  primaryMonitor = config: builtins.elemAt config.wave.device.monitors 0;
 in
 {
   inherit isx86Linux primaryMonitor ldTernary;

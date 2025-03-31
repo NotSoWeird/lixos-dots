@@ -54,7 +54,7 @@ let
     => false
     ```
   */
-  hasProfile = conf: list: any (flip elem conf.garden.device.profiles) list;
+  hasProfile = conf: list: any (flip elem conf.wave.device.profiles) list;
 
   /**
     check if the device is wayland-ready
@@ -76,7 +76,7 @@ let
     => true
     ```
   */
-  isWayland = conf: conf.garden.meta.isWayland;
+  isWayland = conf: conf.wave.meta.isWayland;
 
   /**
     check if the device is modernShell-ready
@@ -99,7 +99,7 @@ let
     ```
   */
   isModernShell =
-    conf: conf.garden.programs.cli.enable && conf.garden.programs.cli.modernShell.enable;
+    conf: conf.wave.programs.cli.enable && conf.wave.programs.cli.modernShell.enable;
 
   /**
     check if a predicate for any user config is true
@@ -119,7 +119,7 @@ let
     # Example
 
     ```nix
-    anyHome config (cfg: cfg.enable && cfg.modernShell.enable) [ "garden" "programs" "cli" ]
+    anyHome config (cfg: cfg.enable && cfg.modernShell.enable) [ "wave" "programs" "cli" ]
     => true
     ```
   */
@@ -136,7 +136,7 @@ let
           ]
           ++ path
         ) conf
-      ) conf.garden.system.users;
+      ) conf.wave.system.users;
     in
     any cond list;
 in

@@ -1,5 +1,5 @@
 {
-  garden = {
+  wave = {
     device = {
       type = "laptop";
       cpu = "intel";
