@@ -5,7 +5,7 @@
   ...
 }:
 let
-  inherit (lib.modules) mkIf mkMerge mkAfter;
+  inherit (lib.modules) mkIf mkMerge;
   inherit (lib.options) mkEnableOption;
 in
 {

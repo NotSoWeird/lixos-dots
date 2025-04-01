@@ -1,9 +1,4 @@
-{
-  self,
-  config,
-  inputs',
-  ...
-}:
+_:
 {
   programs.nh = {
     enable = true;

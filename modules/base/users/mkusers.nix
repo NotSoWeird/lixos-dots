@@ -1,7 +1,6 @@
 {
   lib,
   self,
-  pkgs,
   config,
   ...
 }:
@@ -20,7 +19,7 @@ in
       home = "/home/" + name;
       shell = hm.wave.programs.${hm.wave.programs.defaults.shell}.package;
     }
-    // ({
+    // {
       uid = mkDefault 1000;
       isNormalUser = true;
       initialPassword = mkDefault "changeme";
@@ -51,6 +50,6 @@ in
           "libvirtd"
           "cloudflared"
         ];
-    })
+    }
   );
 }

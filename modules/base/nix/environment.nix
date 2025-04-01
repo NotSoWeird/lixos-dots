@@ -7,7 +7,6 @@
 let
   inherit (builtins) elem;
   inherit (lib.trivial) pipe;
-  inherit (lib.lists) optionals;
   inherit (lib.attrsets) filterAttrs mapAttrs';
   inherit (lib.modules) mkForce;
 in
@@ -23,12 +22,11 @@ in
     etc =
       let
         inherit (config.nix) registry;
-        commonPaths =
-          [
-            "nixpkgs"
-            "tgirlpkgs"
-            "home-manager"
-          ];
+        commonPaths = [
+          "nixpkgs"
+          "tgirlpkgs"
+          "home-manager"
+        ];
       in
       pipe registry [
         (filterAttrs (name: _: (elem name commonPaths)))

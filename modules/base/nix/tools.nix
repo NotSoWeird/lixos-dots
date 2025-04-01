@@ -1,7 +1,5 @@
 {
   lib,
-  pkgs,
-  self,
   config,
   ...
 }:
@@ -22,13 +20,13 @@ in
   };
 
   config.system = {
-        disableInstallerTools = cfg.minimal;
+    disableInstallerTools = cfg.minimal;
 
-        rebuild.enableNg = true;
+    rebuild.enableNg = true;
 
-        tools = {
-          nixos-version.enable = true;
-          nixos-rebuild.enable = false;
-        };
-      };
+    tools = {
+      nixos-version.enable = true;
+      nixos-rebuild.enable = false;
+    };
+  };
 }

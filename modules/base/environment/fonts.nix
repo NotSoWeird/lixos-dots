@@ -4,9 +4,6 @@
   config,
   ...
 }:
-let
-  inherit (self.lib.hardware) ldTernary;
-in
 {
   fonts =
     {
