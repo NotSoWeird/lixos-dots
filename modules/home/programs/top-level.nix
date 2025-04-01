@@ -2,11 +2,11 @@
 let
   inherit (lib.options) mkEnableOption;
 
-  cfg = config.garden.programs;
+  cfg = config.wave.programs;
 in
 {
   # these are options that will cause a mass rebuild by enabling multiple packages
-  options.garden.programs = {
+  options.wave.programs = {
     cli = {
       enable = mkEnableOption "Enable CLI programs" // {
         default = true;

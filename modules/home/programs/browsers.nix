@@ -8,7 +8,7 @@ let
   inherit (self.lib.programs) mkProgram;
 in
 {
-  options.garden.programs = {
+  options.wave.programs = {
     chromium = mkProgram pkgs "chromium" {
       package.default = inputs'.tgirlpkgs.packages.thorium;
     };

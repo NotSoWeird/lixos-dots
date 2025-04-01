@@ -9,7 +9,7 @@ let
   inherit (self.lib.programs) mkProgram;
 in
 {
-  options.garden.programs = {
+  options.wave.programs = {
     zathura = mkProgram pkgs "zathura" { };
 
     discord = mkProgram pkgs "discord" {
@@ -20,7 +20,7 @@ in
     };
 
     cocogitto = mkProgram pkgs "cocogitto" {
-      enable.default = config.garden.programs.cli.enable;
+      enable.default = config.wave.programs.cli.enable;
     };
   };
 }

@@ -10,11 +10,11 @@ let
   inherit (lib.modules) mkIf mkMerge;
   inherit (lib.options) mkEnableOption;
 
-  sys = config.garden.system;
+  sys = config.wave.system;
   cfg = sys.virtualization;
 in
 {
-  options.garden.system.virtualization = {
+  options.wave.system.virtualization = {
     enable = mkEnableOption "Should the device be allowed to virtualizle processes";
     docker.enable = mkEnableOption "docker";
     podman.enable = mkEnableOption "podman";

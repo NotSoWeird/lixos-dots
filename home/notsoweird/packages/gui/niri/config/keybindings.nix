@@ -9,8 +9,8 @@
       {
         "Mod+Shift+T".action = show-hotkey-overlay;
 
-        "Mod+Space".action = spawn "wofi";
-        "Mod+Return".action = spawn "kitty";
+        "Mod+Space".action = spawn "rofi";
+        "Mod+Return".action = spawn "wezterm";
 
         "Mod+O".action = sh "waypaper --random";
 
