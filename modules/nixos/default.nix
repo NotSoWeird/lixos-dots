@@ -3,7 +3,6 @@
     ./boot # boot and bootloader configurations
     ./environment # system environment
     ./fs # file system confiurations
-    ./gaming # super cool procrastinations related things
     ./hardware # hardware - bluetooth etc.
     ./networking # networking
     ./profiles # system profiles

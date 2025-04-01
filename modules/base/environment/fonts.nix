@@ -33,7 +33,7 @@
         inherit (pkgs.nerd-fonts) symbols-only;
       };
     }
-    // pkgs {
+    // {
       # if we are on linux we should create a fontconfig file
       fontconfig = {
         enable = true;

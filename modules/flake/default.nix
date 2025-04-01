@@ -1,6 +1,6 @@
 {
   imports = [
-    # ../../systems # the host systems configurations
+    ../../systems # the host systems configurations
 
     ./checks # custom checks that are devised to test if the system is working as expected
     ./lib # the lib that is used in the system

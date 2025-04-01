@@ -7,8 +7,6 @@
 let
   inherit (lib.options) mkOption;
   inherit (lib.types) enum nullOr;
-  inherit (self.lib.hardware) ldTernary;
-in
 {
   options.wave.programs.defaults = {
     shell = mkOption {
@@ -18,7 +16,7 @@ in
         "fish"
         "nushell"
       ];
-      default = ldTernary pkgs "bash" "zsh";
+      default = "fish";
     };
 
     terminal = mkOption {
