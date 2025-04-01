@@ -1,12 +1,11 @@
 {
   lib,
-  self,
-  pkgs,
   ...
 }:
 let
   inherit (lib.options) mkOption;
   inherit (lib.types) enum nullOr;
+in
 {
   options.wave.programs.defaults = {
     shell = mkOption {
@@ -24,7 +23,7 @@ let
         "kitty"
         "wezterm"
       ];
-      default = "kitty";
+      default = "wezterm";
     };
 
     fileManager = mkOption {

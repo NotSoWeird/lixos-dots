@@ -31,7 +31,7 @@ in
     };
 
     # We love legacy support (for now)
-    nixPath = (attrValues (mapAttrs (k: v: "${k}=flake:${v.outPath}") flakeInputs));
+    nixPath = attrValues (mapAttrs (k: v: "${k}=flake:${v.outPath}") flakeInputs);
 
     # set up garbage collection to run <on the time frame specified per system>, and removing packages after 3 days
     gc = {

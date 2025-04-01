@@ -36,8 +36,14 @@ in
         modules = [ (self + /modules/home/default.nix) ];
       };
 
-      hyfetch = mkModule {
+      gtklock = mkModule {
         name = "gtklock";
+        class = "homeManager";
+        modules = [ (self + /modules/extra/home-manager/gtklock.nix) ];
+      };
+
+      hyfetch = mkModule {
+        name = "hyfetch";
         class = "homeManager";
         modules = [ (self + /modules/extra/home-manager/hyfetch.nix) ];
       };

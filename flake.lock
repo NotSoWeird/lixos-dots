@@ -409,6 +409,7 @@
         "niri": "niri",
         "nixpkgs": "nixpkgs_2",
         "systems": "systems",
+        "tgirlpkgs": "tgirlpkgs",
         "treefmt-nix": "treefmt-nix"
       }
     },
@@ -445,6 +446,26 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "tgirlpkgs": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1743468646,
+        "narHash": "sha256-04IDNN4XutQ2oSLMwFdJBqNnExiEViK1RTLccCEIHGs=",
+        "owner": "tgirlcloud",
+        "repo": "pkgs",
+        "rev": "2cb1867d5eb4f0d79afa44eaa3d0ef87c2ec27f6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tgirlcloud",
+        "repo": "pkgs",
         "type": "github"
       }
     },

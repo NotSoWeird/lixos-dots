@@ -68,6 +68,13 @@
 
     niri.url = "github:sodiboo/niri-flake";
 
+    tgirlpkgs = {
+      type = "github";
+      owner = "tgirlcloud";
+      repo = "pkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # cosmic = {
     #   type = "github";
     #   owner = "lilyinstarlight";
