@@ -53,9 +53,9 @@ in
 
     launcher = mkOption {
       type = nullOr (enum [
-        "fuzzel"
+        "rofi"
       ]);
-      default = "fuzzel";
+      default = "rofi";
     };
 
     bar = mkOption {
