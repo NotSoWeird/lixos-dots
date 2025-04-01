@@ -68,15 +68,15 @@
 
     niri.url = "github:sodiboo/niri-flake";
 
-    cosmic = {
-      type = "github";
-      owner = "lilyinstarlight";
-      repo = "nixos-cosmic";
+    # cosmic = {
+    #   type = "github";
+    #   owner = "lilyinstarlight";
+    #   repo = "nixos-cosmic";
 
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
-    };
+    #   inputs = {
+    #     nixpkgs.follows = "nixpkgs";
+    #   };
+    # };
 
     treefmt-nix = {
       type = "github";
